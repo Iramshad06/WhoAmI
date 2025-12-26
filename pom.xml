@@ -95,7 +95,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>EmbeddedServer</mainClass>
+                            <mainClass>com.whoami.EmbeddedServer</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
