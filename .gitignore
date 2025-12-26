@@ -1,0 +1,11 @@
+.classpath
+.project
+.settings/
+target/
+*.class
+*.log
+*.war
+*.ear
+*.jar
+.DS_Store
+Thumbs.db

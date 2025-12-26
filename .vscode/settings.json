@@ -1,0 +1,26 @@
+{
+    "java.project.sourcePaths": [
+        "src/main/java"
+    ],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "src/main/webapp/WEB-INF/lib/**/*.jar"
+    ],
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.compile.nullAnalysis.mode": "disabled",
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m",
+    "files.exclude": {
+        "**/.class": true,
+        "**/bin": true,
+        "**/build": true,
+        "**/target": true
+    },
+    "css.validate": false,
+    "css.lint.validProperties": [
+        "width"
+    ],
+    "files.associations": {
+        "*.jsp": "jsp"
+    }
+}
