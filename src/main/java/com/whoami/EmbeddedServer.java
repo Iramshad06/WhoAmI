@@ -3,8 +3,8 @@ package com.whoami;
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
-import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -67,9 +67,13 @@ public class EmbeddedServer {
                 throw new IOException("JAR resource extraction not implemented");
             } else {
                 // File system
-                Path sourcePath = Paths.get(resource.toURI());
-                if (Files.isDirectory(sourcePath)) {
-                    copyDirectory(sourcePath, target);
+                try {
+                    Path sourcePath = Paths.get(resource.toURI());
+                    if (Files.isDirectory(sourcePath)) {
+                        copyDirectory(sourcePath, target);
+                    }
+                } catch (URISyntaxException e) {
+                    throw new IOException("Invalid URI for resource: " + resource, e);
                 }
             }
         } else {
